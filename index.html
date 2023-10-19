@@ -6,13 +6,28 @@
 		<script defer src="index.js"></script>
 	</head>
 	<body>
-		<div>Page</div>
+		<style>
+			.rouge {
+				background-color: red;
+			}
+			.bleu {
+				background-color: blue;
+			}
+		</style>
 
-		<!--<script src="pathtojs"></script>-->
-		<script>
-			// JS code
-			//let a = 1;
-			//console.log(a);
-		</script>
+		<h1>Mon titre</h1>
+		<div id="mapremdiv">
+			<p id="monprempara" class="orange">Mon paragraphe</p>
+			<a href="test0" id="monpremlien" class="bleu">Mon Lien</a>
+			<div id="madeuxdiv">
+				<p id="mondeuxpara" class="bleu orange">Mon second paragraphe</p>
+				<a href="test" id="mondeuxlien">Mon second Lien</a>
+			</div>
+			<a href="test2" id="montroislien">Mon second Lien</a>
+			<a id="monquatrelien">Mon second Lien</a>
+
+			<button id="btn">click me</button>
+		</div>
+		<script src="DOM.js"></script>
 	</body>
 </html>
