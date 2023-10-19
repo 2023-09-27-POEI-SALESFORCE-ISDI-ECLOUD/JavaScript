@@ -226,3 +226,15 @@ console.log(filtered_categories["homme"]);
 //	console.log(`--------${categorie}-------`);
 //	console.log(filtered_categories[categorie]);
 //}
+
+let products_promo = produits_sans_erreur.filter((product) => {
+	return product.prix < product.ancien_prix;
+});
+
+let products_with_img = produits_sans_erreur.filter((product) => {
+	return product.img_url != "";
+});
+
+let products_with_desc = produits_sans_erreur.filter((product) => {
+	return product.description != "";
+});
