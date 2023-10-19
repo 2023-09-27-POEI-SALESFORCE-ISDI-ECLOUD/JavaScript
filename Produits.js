@@ -85,10 +85,6 @@ let produits = [
 	},
 ];
 
-let produits_sans_erreur = clean_products_from_error(produits);
-
-console.log(produits_sans_erreur);
-
 function clean_products_from_error(array_of_product) {
 	let result;
 	// clean from categorie error
@@ -171,4 +167,62 @@ function clean_products_from_error(array_of_product) {
 //	});
 
 //	return result;
+//}
+
+let produits_sans_erreur = clean_products_from_error(produits);
+//let produits_homme = filter_products_homme(produits_sans_erreur);
+//let produits_femme = filter_products_femme(produits_sans_erreur);
+//let produits_enfant = filter_products_enfant(produits_sans_erreur);
+let produits_homme = filter_products_by_category(produits_sans_erreur, "homme");
+let produits_femme = filter_products_by_category(produits_sans_erreur, "femme");
+let produits_enfant = filter_products_by_category(
+	produits_sans_erreur,
+	"enfant"
+);
+
+//function get_categories(products) {
+//	let result = [];
+//	products.forEach((product) => {
+//		if (!result.includes(product.categorie)) {
+//			result.push(product.categorie);
+//		}
+//	});
+//	return result;
+//}
+//let categories = get_categories(produits_sans_erreur);
+
+//let filtered_categories = {};
+
+//categories.forEach((categorie) => {
+//	filtered_categories[categorie] = filter_products_by_category(
+//		produits_sans_erreur,
+//		categorie
+//	);
+//});
+
+function filter_products_by_category(products, category) {
+	let result = products.filter((product) => {
+		return product.categorie == category;
+	});
+
+	return result;
+}
+
+//function filter_products_homme(products) {
+//	return filter_products_by_category(products, "homme");
+//}
+
+console.log(produits_homme);
+console.log(produits_femme);
+console.log(produits_enfant);
+
+//console.log(categories.homme);
+
+console.log(filtered_categories["homme"]);
+
+//console.log("--------------------");
+
+//for (let categorie in filtered_categories) {
+//	console.log(`--------${categorie}-------`);
+//	console.log(filtered_categories[categorie]);
 //}
